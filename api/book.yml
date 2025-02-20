@@ -1,0 +1,10 @@
+apiVersion: nigelpoulton.com/v1
+kind: Book
+metadata:
+  name: ai
+spec:
+  bookTitle: "AI Explained"
+  subTitle: "Facts, Fiction, and Future"
+  topic: "Artificial Intelligence"
+  edition: 1
+  salesUrl: "https://www.amazon.com/dp/1916585388"

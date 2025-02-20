@@ -1,0 +1,51 @@
+apiVersion: apiextensions.k8s.io/v1
+kind: CustomResourceDefinition
+metadata:
+  name: books.nigelpoulton.com
+spec:
+  group: nigelpoulton.com      
+  scope: Cluster            
+  names:
+    plural: books      
+    singular: book     
+    kind: Book         
+    shortNames:
+    - bk                       
+  versions:                    
+    - name: v1                  
+      served: true             
+      storage: true            
+      schema:                  
+        openAPIV3Schema:
+          type: object
+          properties:
+            spec:
+              type: object
+              properties:
+                bookTitle:
+                  type: string
+                subTitle:
+                  type: string
+                topic:
+                  type: string
+                edition:
+                  type: integer
+                salesUrl: 
+                  type: string
+      additionalPrinterColumns:
+      - name: Title
+        type: string
+        description: Title of the book
+        jsonPath: .spec.bookTitle
+      - name: Subtitle
+        type: string
+        description: Subtitle
+        jsonPath: .spec.subTitle
+      - name: Edition
+        type: integer
+        description: Edition number
+        jsonPath: .spec.edition
+      - name: URL
+        type: string
+        description: Sales URL
+        jsonPath: .spec.salesUrl

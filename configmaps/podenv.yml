@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    chapter: configmaps
+  name: envpod
+spec:
+  containers:
+    - name: ctr1
+      image: busybox
+      command: ["sleep"]
+      args: ["infinity"]
+      env:
+        - name: FIRSTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: multimap
+              key: firstname
+        - name: LASTNAME
+          valueFrom:
+            configMapKeyRef:
+              name: multimap
+              key: lastname

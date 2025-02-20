@@ -1,0 +1,11 @@
+# This is for Docker Desktop multi-node (kind) clusters
+# Replace the provisioner line if you're using the older Docker Desktop single-node (kubeadm) cluster as follows:
+# provisioner: rancher.io/local-path  >> provisioner: docker.io/hostpath
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: flash
+provisioner: rancher.io/local-path
+volumeBindingMode: WaitForFirstConsumer
+allowVolumeExpansion: false

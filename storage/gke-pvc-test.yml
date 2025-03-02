@@ -5,7 +5,7 @@ metadata:
 spec:
   accessModes:
   - ReadWriteOnce
-  storageClassName: linode-block-storage
+  storageClassName: premium-rwo
   resources:
     requests:
       storage: 10Gi

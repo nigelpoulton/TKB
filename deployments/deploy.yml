@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: hello-pod
-        image: nigelpoulton/k8sbook:2.0
+        image: nigelpoulton/k8sbook:1.0
         ports:
         - containerPort: 8080
         resources:

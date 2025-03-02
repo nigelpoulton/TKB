@@ -1,5 +1,7 @@
 # The Kubernetes Book
 
+**You're on the 2025 branch!**
+
 Lab files for **The Kubernetes Book**.
 
 The old repo was getting messy, so I created this brand new repo starting with the 2025 edition of the book.

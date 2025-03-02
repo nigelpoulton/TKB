@@ -1,6 +1,6 @@
 # The Kubernetes Book
 
-**You're on the 2025 branch!**
+**You're working with the 2025 config!**
 
 Lab files for **The Kubernetes Book**.
 

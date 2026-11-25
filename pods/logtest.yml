@@ -1,0 +1,18 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: logtest
+spec:
+  containers:
+    - name: app
+      image: nginx
+      ports:
+        - containerPort: 8080
+    - name: syncer
+      image: k8sgcr.io/git-sync:latest
+      volumeMounts:
+        - name: html
+          mountPath: /usr/share/nginx/html
+  volumes:
+    - name: html
+      emptyDir: {}

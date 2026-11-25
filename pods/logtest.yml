@@ -9,7 +9,7 @@ spec:
       ports:
         - containerPort: 8080
     - name: syncer
-      image: k8sgcr.io/git-sync:v3.1.6
+      image: k8sgcr.io/git-sync:latest
       volumeMounts:
         - name: html
           mountPath: /usr/share/nginx/html
